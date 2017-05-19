@@ -15,6 +15,7 @@ alias ll='ls -Ahl'
 alias gs="git status -s"
 alias gss="git status"
 alias gd="git diff"
+alias gdc="git diff --cached"
 alias ga='git add'
 alias gc="git commit"
 alias gp="git push"
@@ -41,7 +42,7 @@ alias op="xdg-open"
 alias z="vim ~/.zshrc"
 alias v="vim ~/.vimrc"
 alias sz="source ~/.zshrc"
-
+alias ms="cd /mnt/c/Users/ruvan/"
 #allow tab completion in the middle of a word
 setopt COMPLETE_IN_WORD
 
