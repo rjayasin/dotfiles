@@ -8,6 +8,7 @@ set softtabstop=0
 set relativenumber
 set number
 set ruler
+set dictionary+=/usr/share/dict/words
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
 colorscheme koehler
 
