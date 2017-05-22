@@ -39,8 +39,21 @@ alias op="xdg-open"
 alias z="vim ~/.zshrc"
 alias v="vim ~/.vimrc"
 alias sz="source ~/.zshrc"
-alias ms="cd /mnt/c/Users/ruvan/"
-#allow tab completion in the middle of a word
+
+# turn a regular windows path to a WSL path
+# usage: $ ms "windows\path\don't\forget\quotes"
+function ms(){
+	if [[ $# -eq 0 ]] ;
+   	then
+		cd /mnt/c/Users/$USER/
+	else
+		line=$(sed -e 's#^C:#/mnt/c#' -e 's#\\#/#g' <<< $1)
+		echo $line
+		cd ${line}
+	fi
+}
+
+# allow tab completion in the middle of a word
 setopt COMPLETE_IN_WORD
 
 # Use vim keybindings
