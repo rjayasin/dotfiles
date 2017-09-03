@@ -1,11 +1,11 @@
-#!/usr/bin/env zsh
-
+#!/usr/bin/env bash
 # Don't forget to run as root!
 
 cd
 apt-get update && apt-get -y upgrade
 apt-get -y install python tmux git htop python3-pip
 
+# todo: prompt to clone dotfiles
 git init .
 git remote add origin https://github.com/rjayasin/dotfiles.git
 git pull origin master
