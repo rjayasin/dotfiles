@@ -1,5 +1,5 @@
-*
 !.git*
 !.zshrc
 !.vimrc
-!ubuntu_setup.sh
+!setup.sh
+!.i3/config
