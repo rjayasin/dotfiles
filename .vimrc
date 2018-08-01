@@ -1,16 +1,21 @@
 "Sane defaults
 filetype plugin indent on
-set encoding=utf-8
-set tabstop=4 
-set shiftwidth=4
-set noexpandtab 
-set softtabstop=0
-set relativenumber
-set number
-set ruler
 set dictionary+=/usr/share/dict/words
+set encoding=utf-8
+set hlsearch
+set ignorecase
+set incsearch
+set expandtab 
+set number
+set relativenumber
+set ruler
+set shiftwidth=4
+set showcmd
+set smartcase
+set softtabstop=0
+set tabstop=4 
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
-colorscheme koehler
+colorscheme ron
 
 "More intuitive window handling
 set splitbelow
