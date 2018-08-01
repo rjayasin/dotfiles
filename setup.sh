@@ -7,6 +7,7 @@ cd
 apt update || true
 apt -y upgrade
 apt install -y \
+    chromium-browser \
 	git \
 	htop \
 	python \
