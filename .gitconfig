@@ -1,3 +1,5 @@
+[core]
+    excludesfile = ~/.gitignore_global
 [user]
 	name = rjayasin
 	email = ruvanjayasinghe@gmail.com
