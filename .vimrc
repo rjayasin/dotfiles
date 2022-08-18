@@ -15,7 +15,7 @@ set smartcase
 set softtabstop=0
 set tabstop=4 
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
-colorscheme ron
+colorscheme default
 
 "More intuitive window handling
 set splitbelow
