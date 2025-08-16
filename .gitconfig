@@ -2,4 +2,6 @@
     excludesfile = ~/.gitignore_global
 [user]
 	name = rjayasin
-	email = ruvanjayasinghe@gmail.com
+	email = rjayasin@users.noreply.github.com
+[init]
+	defaultBranch = main
