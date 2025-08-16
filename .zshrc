@@ -18,18 +18,20 @@ bindkey '^r' history-incremental-search-backward
 export EDITOR=vim
 
 # basics
-alias ag='rg'
-alias f='ag -i -g'
+alias ag='rg -i'
+alias f='rg --files | rg'
 
 alias grep='grep --color=auto'
+alias ls='ls --color=auto'
 alias la='ls -A'
 alias ll='ls -Ahl'
-alias ls='ls --color=auto'
 
 # git
 alias ga='git add'
 alias gb='git branch' 
 alias gc="git commit"
+alias gcm="git checkout main || git checkout master"
+alias gc-="git checkout -"
 alias gd="git diff"
 alias gd='git diff'
 alias gdc="git diff --cached"
@@ -49,6 +51,16 @@ alias z="vim ~/.zshrc"
 alias v="vim ~/.vimrc"
 alias sz="source ~/.zshrc"
 
+
+fuji() {
+    if [[ -z "$1" ]]; then
+        echo "Usage: fuji <filename>"
+        return 1
+    fi
+    exiftool "$1" | rg -i "grain|film mode|white|highlight|shadow|clarity|color chrome|iso|Exposure Compensation|noise|saturation|Dynamic Range" | sort
+}
+
+
 # allow tab completion in the middle of a word
 setopt COMPLETE_IN_WORD
 
@@ -58,3 +70,5 @@ setopt NO_BEEP
 zstyle ':completion:*' menu select
 
 ZSH_THEME="agnoster"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
