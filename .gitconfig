@@ -5,3 +5,5 @@
 	email = rjayasin@users.noreply.github.com
 [init]
 	defaultBranch = main
+[commit]
+	verbose = true
