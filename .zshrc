@@ -57,7 +57,7 @@ fuji() {
         echo "Usage: fuji <filename>"
         return 1
     fi
-    exiftool "$1" | rg -i "grain|film mode|white|highlight|shadow|clarity|color chrome|iso|Exposure Compensation|noise|saturation|Dynamic Range" | sort
+    exiftool "$1" | rg -i "grain|film mode|white|highlight|shadow|clarity|color chrome|iso|Exposure Compensation|noise|saturation|Dynamic Range|Shutter Speed[ ]*:|Aperture Value" | sort
 }
 
 
