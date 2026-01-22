@@ -1,19 +1,25 @@
 {
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "One Monokai",
-    "editor.minimap.enabled": false,
-    "editor.fontSize": 14,
-    "gitlens.currentLine.enabled": false,
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // In VSCode run >JSON: Sort Document
+    "[python]": {
+        "editor.formatOnType": true
     },
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": false
-    },
+    "chat.commandCenter.enabled": false,
+    "diffEditor.renderSideBySide": false,
+    "editor.fontSize": 14.5,
+    "editor.formatOnPaste": true,
     "editor.formatOnSaveMode": "modifications",
-    "workbench.editor.revealIfOpen": true,
-    "boot-java.rewrite.reconcile": true,
-    "prettier.semi": false,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "extensions.ignoreRecommendations": true,
+    "git.blame.editorDecoration.enabled": false,
+    "git.blame.statusBarItem.enabled": true,
+    "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.fontFamily": "Menlo for Powerline",
-    "terminal.integrated.fontSize": 14
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.scrollback": 1000000000,
+    "workbench.colorTheme": "One Monokai",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.revealIfOpen": true,
+    "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
