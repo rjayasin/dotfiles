@@ -7,6 +7,8 @@ sync:
 	[ -f ~/.gitignore_global ] || ln -s $(PWD)/.gitignore_global ~/.gitignore_global
 	[ -f ~/.tmux.conf ] || ln -s $(PWD)/.tmux.conf ~/.tmux.conf
 
+	touch ~/.hushlogin
+
 clean:
 	rm -f ~/.vimrc 
 	rm -f ~/.gitconfig

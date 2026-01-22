@@ -1,9 +1,16 @@
 [core]
     excludesfile = ~/.gitignore_global
+    pager = delta
+
 [user]
-	name = rjayasin
-	email = rjayasin@users.noreply.github.com
+    name = rjayasin
+    email = rjayasin@users.noreply.github.com
+
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
 [commit]
-	verbose = true
+    verbose = true
+
+[alias]
+    psuh = push
