@@ -29,9 +29,10 @@ alias ll='ls -Ahl'
 # git
 alias ga='git add'
 alias gb='git branch' 
+alias gc-="git checkout -"
 alias gc="git commit"
 alias gcm="git checkout main || git checkout master"
-alias gc-="git checkout -"
+alias gcno="git commit --amend --no-edit"
 alias gd="git diff"
 alias gd='git diff'
 alias gdc="git diff --cached"
@@ -40,6 +41,8 @@ alias gll="git log"
 alias gln="git log --oneline -n"
 alias gs="git status -s"
 alias gss="git status"
+alias web="gh repo view --web"
+
 
 alias sz='source ~/.zshrc'
 alias v='vim ~/.vimrc'
