@@ -1,9 +1,5 @@
-# mac dotfiles
-
 ### oh-my-zsh stuff #####################
 export ZSH=$HOME/.oh-my-zsh
-
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
 
 plugins=(git)
@@ -35,7 +31,6 @@ alias gc="git commit"
 alias gcm="git checkout main || git checkout master"
 alias gcno="git commit --amend --no-edit"
 alias gd="git diff"
-alias gd='git diff'
 alias gdc="git diff --cached"
 alias gl="git log --oneline"
 alias gll="git log"
@@ -45,16 +40,10 @@ alias gss="git status"
 alias web="gh repo view --web"
 
 
-alias sz='source ~/.zshrc'
-alias v='vim ~/.vimrc'
-alias z='vim ~/.zshrc'
 alias s="cd ~/src"
-
-# misc
-alias z="vim ~/.zshrc"
-alias v="vim ~/.vimrc"
 alias sz="source ~/.zshrc"
-
+alias v="vim ~/.vimrc"
+alias z="vim ~/.zshrc"
 
 fuji() {
     if [[ -z "$1" ]]; then
@@ -72,8 +61,6 @@ setopt COMPLETE_IN_WORD
 setopt NO_BEEP
 
 zstyle ':completion:*' menu select
-
-ZSH_THEME="agnoster"
 
 export PATH="$HOME/.local/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

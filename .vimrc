@@ -28,7 +28,6 @@ map <C-L> <C-W>l
 "set relativenumber
 "set cursorline
 syntax enable
-set encoding=utf-8
 
 "Leader Commands
 let mapleader = ","

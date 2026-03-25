@@ -5,10 +5,10 @@ set -o pipefail
 sudo apt update || true
 sudo apt -y upgrade
 sudo apt install -y \
-    chromium-browser \
+	btop \
+	chromium-browser \
 	curl \
 	git \
-	btop \
 	ripgrep \
 	silversearcher-ag \
 	tmux \
