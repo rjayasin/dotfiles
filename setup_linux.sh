@@ -8,6 +8,7 @@ apt update || true
 apt -y upgrade
 apt install -y \
     chromium-browser \
+	curl \
 	git \
 	btop \
 	ripgrep \
