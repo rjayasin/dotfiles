@@ -27,3 +27,5 @@ chsh -s "$(which zsh)"
 apt autoremove
 apt autoclean
 apt clean
+
+echo "Done!"
