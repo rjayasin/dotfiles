@@ -9,9 +9,8 @@ apt -y upgrade
 apt install -y \
     chromium-browser \
 	git \
-	htop \
-	python \
-	python3-pip \
+	btop \
+	ripgrep \
 	silversearcher-ag \
 	tmux \
 	zsh
