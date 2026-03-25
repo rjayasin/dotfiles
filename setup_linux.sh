@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
-# Don't forget to run as root!
 set -e
 set -o pipefail
 
-cd
-apt update || true
-apt -y upgrade
-apt install -y \
+sudo apt update || true
+sudo apt -y upgrade
+sudo apt install -y \
     chromium-browser \
 	curl \
 	git \
@@ -22,10 +20,10 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 fi
 
 # Change default shell to zsh
-chsh -s "$(which zsh)"
+sudo chsh -s "$(which zsh)" "$USER"
 
-apt autoremove
-apt autoclean
-apt clean
+sudo apt autoremove
+sudo apt autoclean
+sudo apt clean
 
 echo "Done!"
