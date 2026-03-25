@@ -6,7 +6,7 @@ sudo apt update || true
 sudo apt -y upgrade
 sudo apt install -y \
 	btop \
-	chromium-browser \
+	firefox \
 	curl \
 	git \
 	ripgrep \
