@@ -10,10 +10,11 @@ sync:
 	touch ~/.hushlogin
 
 clean:
-	rm -f ~/.vimrc 
+	rm -f ~/.vimrc
 	rm -f ~/.gitconfig
 	rm -f ~/.gitignore_global
 	rm -f ~/.tmux.conf
 	rm -f ~/.zshrc
+	rm -f ~/.hushlogin
 
 .PHONY: all clean sync 
