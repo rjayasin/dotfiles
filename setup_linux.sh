@@ -13,7 +13,16 @@ apt install -y \
 	python \
 	python3-pip \
 	silversearcher-ag \
-	tmux
+	tmux \
+	zsh
+
+# Install oh-my-zsh
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi
+
+# Change default shell to zsh
+chsh -s "$(which zsh)"
 
 apt autoremove
 apt autoclean
