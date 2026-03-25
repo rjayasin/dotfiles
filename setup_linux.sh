@@ -22,6 +22,9 @@ fi
 # Change default shell to zsh
 sudo chsh -s "$(which zsh)" "$USER"
 
+# Symlink dotfiles
+make -C "$(dirname "$0")" sync
+
 sudo apt autoremove
 sudo apt autoclean
 sudo apt clean
