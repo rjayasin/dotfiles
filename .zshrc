@@ -28,6 +28,7 @@ alias ll='ls -Ahl'
 
 # git
 alias ga='git add'
+alias ga.='git add .'
 alias gb='git branch' 
 alias gc-="git checkout -"
 alias gc="git commit"
@@ -74,4 +75,5 @@ zstyle ':completion:*' menu select
 
 ZSH_THEME="agnoster"
 
+export PATH="$HOME/.local/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
