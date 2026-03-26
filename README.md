@@ -14,7 +14,7 @@ Personal dotfiles and system configuration.
 On a new machine, run:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/rjayasin/dotfiles/main/bootstrap.sh | sh
+wget -qO- https://raw.githubusercontent.com/rjayasin/dotfiles/main/bootstrap.sh | sh
 ```
 
 ## Usage
