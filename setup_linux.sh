@@ -12,8 +12,10 @@ sudo apt install -y \
 	git \
 	ripgrep \
 	silversearcher-ag \
+	neovim \
 	speedtest-cli \
 	tmux \
+	tree \
 	zsh
 
 # Install oh-my-zsh

@@ -11,9 +11,10 @@ bindkey -v
 # fix history not working in vim mode
 bindkey '^r' history-incremental-search-backward
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # basics
+alias vim='nvim'
 alias ag='rg -i'
 alias f='rg --files | rg'
 
