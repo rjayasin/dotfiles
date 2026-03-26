@@ -9,6 +9,7 @@ sudo apt install -y \
 	firefox \
 	curl \
 	ffmpeg \
+	fzf \
 	git \
 	ripgrep \
 	silversearcher-ag \
