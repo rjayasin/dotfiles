@@ -8,10 +8,15 @@ sudo apt install -y \
 	btop \
 	firefox \
 	curl \
+	ffmpeg \
+	fzf \
 	git \
 	ripgrep \
 	silversearcher-ag \
+	neovim \
+	speedtest-cli \
 	tmux \
+	tree \
 	zsh
 
 # Install oh-my-zsh
