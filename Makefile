@@ -6,6 +6,8 @@ sync:
 	ln -sf $(PWD)/.gitconfig ~/.gitconfig
 	ln -sf $(PWD)/.gitignore_global ~/.gitignore_global
 	ln -sf $(PWD)/.tmux.conf ~/.tmux.conf
+	mkdir -p ~/.config/nvim
+	ln -sf $(PWD)/.config/nvim/init.vim ~/.config/nvim/init.vim
 
 	touch ~/.hushlogin
 
@@ -16,5 +18,6 @@ clean:
 	rm -f ~/.tmux.conf
 	rm -f ~/.zshrc
 	rm -f ~/.hushlogin
+	rm -f ~/.config/nvim/init.vim
 
 .PHONY: all clean sync 
