@@ -8,9 +8,11 @@ sudo apt install -y \
 	btop \
 	firefox \
 	curl \
+	ffmpeg \
 	git \
 	ripgrep \
 	silversearcher-ag \
+	speedtest-cli \
 	tmux \
 	zsh
 
