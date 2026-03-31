@@ -8,6 +8,7 @@ sudo apt install -y \
 	btop \
 	firefox \
 	curl \
+	exiftool \
 	ffmpeg \
 	fzf \
 	git \
