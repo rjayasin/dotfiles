@@ -7,14 +7,14 @@ Personal dotfiles and system configuration.
 - `.vimrc`, `.zshrc`, `.gitconfig`, `.gitignore_global`, `.tmux.conf` — config files
 - `settings.json` — VS Code settings
 - `setup_linux.sh` — installs packages, zsh, oh-my-zsh, and symlinks dotfiles
-- `bootstrap.sh` — fresh machine setup (installs git, clones repo, runs setup)
+- `bootstrap_linux.sh` — fresh machine setup (installs git, clones repo, runs setup)
 
 ## Fresh install
 
 On a new machine, run:
 
 ```sh
-wget -qO- https://raw.githubusercontent.com/rjayasin/dotfiles/main/bootstrap.sh | sh
+wget -qO- https://raw.githubusercontent.com/rjayasin/dotfiles/main/bootstrap_linux.sh | sh
 ```
 
 ## Usage
