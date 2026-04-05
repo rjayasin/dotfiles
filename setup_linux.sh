@@ -4,17 +4,18 @@ set -o pipefail
 
 sudo apt update || true
 sudo apt -y upgrade
+# Keep packages alphabetized
 sudo apt install -y \
 	btop \
-	firefox \
 	curl \
-	libimage-exiftool-perl \
 	ffmpeg \
+	firefox \
 	fzf \
 	git \
+	libimage-exiftool-perl \
+	neovim \
 	ripgrep \
 	silversearcher-ag \
-	neovim \
 	speedtest-cli \
 	tmux \
 	tree \
