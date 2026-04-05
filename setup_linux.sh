@@ -17,7 +17,6 @@ sudo apt install -y \
 	ripgrep \
 	silversearcher-ag \
 	speedtest-cli \
-	tmux \
 	tree \
 	zsh
 
