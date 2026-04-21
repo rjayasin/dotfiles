@@ -47,6 +47,8 @@ alias sz="source ~/.zshrc"
 alias v="vim ~/.vimrc"
 alias z="vim ~/.zshrc"
 
+vf() { vim $(fzf --preview 'cat {}'); }
+
 fuji() {
     if [[ -z "$1" ]]; then
         echo "Usage: fuji <filename>"
