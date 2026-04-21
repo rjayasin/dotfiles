@@ -12,6 +12,7 @@ sudo apt install -y \
 	firefox \
 	fzf \
 	git \
+	jq \
 	libimage-exiftool-perl \
 	neovim \
 	ripgrep \
