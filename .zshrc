@@ -39,6 +39,7 @@ alias gln="git log --oneline -n"
 alias gs="git status -s"
 alias gss="git status"
 alias web="gh repo view --web"
+alias dep='GH_PAGER= gh run view $(gh run list --limit 1 --json databaseId --jq ".[0].databaseId") --web'
 
 
 alias s="cd ~/src"
