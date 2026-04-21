@@ -6,6 +6,7 @@ sudo apt update || true
 sudo apt -y upgrade
 # Keep packages alphabetized
 sudo apt install -y \
+	bat \
 	btop \
 	curl \
 	ffmpeg \
