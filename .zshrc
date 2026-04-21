@@ -47,7 +47,7 @@ alias sz="source ~/.zshrc"
 alias v="vim ~/.vimrc"
 alias z="vim ~/.zshrc"
 
-vf() { vim $(fzf --preview 'cat {}'); }
+vf() { vim $(fzf --preview 'bat --color=always {}'); }
 
 fuji() {
     if [[ -z "$1" ]]; then
