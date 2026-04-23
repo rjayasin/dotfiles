@@ -12,6 +12,7 @@ sudo apt install -y \
 	ffmpeg \
 	firefox \
 	fzf \
+	gh \
 	git \
 	jq \
 	libimage-exiftool-perl \
