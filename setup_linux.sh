@@ -2,10 +2,16 @@
 set -e
 set -o pipefail
 
-sudo apt update || true
-sudo apt -y upgrade
+# Use apt-get (stable scripting CLI), block on dpkg lock instead of failing
+# if unattended-upgrades is running, and run non-interactively so the
+# upgrade doesn't stall on tzdata/grub-style prompts.
+export DEBIAN_FRONTEND=noninteractive
+APT=(sudo apt-get -y -o DPkg::Lock::Timeout=-1)
+
+"${APT[@]}" update
+"${APT[@]}" dist-upgrade
 # Keep packages alphabetized
-sudo apt install -y \
+"${APT[@]}" install \
 	bat \
 	btop \
 	curl \
@@ -34,8 +40,8 @@ sudo chsh -s "$(which zsh)" "$USER"
 # Symlink dotfiles
 make -C "$(dirname "$0")" sync
 
-sudo apt autoremove
-sudo apt autoclean
-sudo apt clean
+"${APT[@]}" autoremove
+"${APT[@]}" autoclean
+"${APT[@]}" clean
 
 echo "Done!"
