@@ -2,9 +2,27 @@
 set -e
 set -o pipefail
 
-sudo apt update || true
+# Wait for any background apt/dpkg process (e.g. unattended-upgrades) to
+# release its locks before we try to run apt ourselves.
+wait_for_apt() {
+	local locks=(
+		/var/lib/apt/lists/lock
+		/var/lib/dpkg/lock
+		/var/lib/dpkg/lock-frontend
+		/var/cache/apt/archives/lock
+	)
+	while sudo fuser "${locks[@]}" >/dev/null 2>&1; do
+		echo "Waiting for another apt/dpkg process to finish..."
+		sleep 2
+	done
+}
+
+wait_for_apt
+sudo apt update
+wait_for_apt
 sudo apt -y upgrade
 # Keep packages alphabetized
+wait_for_apt
 sudo apt install -y \
 	bat \
 	btop \
@@ -34,8 +52,9 @@ sudo chsh -s "$(which zsh)" "$USER"
 # Symlink dotfiles
 make -C "$(dirname "$0")" sync
 
-sudo apt autoremove
-sudo apt autoclean
-sudo apt clean
+wait_for_apt
+sudo apt -y autoremove
+sudo apt -y autoclean
+sudo apt -y clean
 
 echo "Done!"
