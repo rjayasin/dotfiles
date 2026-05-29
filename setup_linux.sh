@@ -20,6 +20,7 @@ APT=(sudo apt-get -y -o DPkg::Lock::Timeout=-1)
 	fzf \
 	gh \
 	git \
+	git-delta \
 	jq \
 	libimage-exiftool-perl \
 	neovim \
