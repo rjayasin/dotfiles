@@ -21,6 +21,7 @@ APT=(sudo apt-get -y -o DPkg::Lock::Timeout=-1)
 	gh \
 	git \
 	git-delta \
+	golang \
 	jq \
 	libimage-exiftool-perl \
 	neovim \
