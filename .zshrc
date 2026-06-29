@@ -19,7 +19,11 @@ alias ag='rg -i'
 alias f='rg --files | rg'
 
 alias grep='grep --color=auto'
-alias ls='ls --color=auto'
+# Directory color = bold blue (Ex). Safe because iTerm "brighten bold text" is OFF, so bold
+# renders as bold-weight normal blue (#268bd2), not the grey Ansi 12. Rest are BSD ls defaults.
+export CLICOLOR=1
+export LSCOLORS='Exfxcxdxbxegedabagacad'
+alias ls='ls -p --color=auto'
 alias la='ls -A'
 alias ll='ls -Ahl'
 
@@ -65,6 +69,9 @@ setopt COMPLETE_IN_WORD
 setopt NO_BEEP
 
 zstyle ':completion:*' menu select
+# Color completion matches to mirror ls (LS_COLORS format, not BSD LSCOLORS).
+# di = directories = bold blue (01;34); rest mirror LSCOLORS pairs. Overrides oh-my-zsh's empty default.
+zstyle ':completion:*' list-colors 'di=01;34' 'ln=35' 'so=32' 'pi=33' 'ex=31'
 
 export PATH="$HOME/.local/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
