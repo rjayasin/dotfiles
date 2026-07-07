@@ -29,6 +29,12 @@ map <C-L> <C-W>l
 "set cursorline
 syntax enable
 
+"Option+Backspace deletes the previous word (like Ctrl-W)
+inoremap <M-BS> <C-W>
+inoremap <A-BS> <C-W>
+"Fallback for terminals that send ESC+DEL for Option+Backspace
+inoremap <Esc><BS> <C-W>
+
 "Leader Commands
 let mapleader = ","
 
