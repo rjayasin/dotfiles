@@ -7,6 +7,7 @@ Personal dotfiles and system configuration.
 - `.vimrc`, `.zshrc`, `.gitconfig`, `.gitignore_global` — config files
 - `settings.json` — VS Code settings
 - `setup_linux.sh` — installs packages, zsh, oh-my-zsh, and symlinks dotfiles
+- `setup_mac.sh` — installs Homebrew, packages, oh-my-zsh, symlinks dotfiles, and sets macOS defaults
 - `bootstrap_linux.sh` — fresh machine setup (installs git, clones repo, runs setup)
 
 ## Fresh install
