@@ -77,4 +77,4 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors 'di=01;34' 'ln=35' 'so=32' 'pi=33' 'ex=31'
 
 export PATH="$HOME/.local/bin:$PATH"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then source ~/.fzf.zsh; fi
