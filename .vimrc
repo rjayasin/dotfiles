@@ -15,7 +15,10 @@ set smartcase
 set softtabstop=0
 set tabstop=4 
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
-colorscheme default
+if has('termguicolors')
+    set termguicolors
+endif
+colorscheme monokai
 
 "More intuitive window handling
 set splitbelow

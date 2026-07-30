@@ -5,6 +5,8 @@ sync:
 	ln -sf $(PWD)/.gitconfig ~/.gitconfig
 	ln -sf $(PWD)/.gitignore_global ~/.gitignore_global
 	ln -sf $(PWD)/.tmux.conf ~/.tmux.conf
+	mkdir -p ~/.vim/colors
+	ln -sf $(PWD)/.vim/colors/monokai.vim ~/.vim/colors/monokai.vim
 	ln -sf $(PWD)/.vimrc ~/.vimrc
 	ln -sf $(PWD)/.zshrc ~/.zshrc
 	mkdir -p ~/.config/nvim
@@ -19,6 +21,7 @@ clean:
 	rm -f ~/.gitignore_global
 	rm -f ~/.hushlogin
 	rm -f ~/.tmux.conf
+	rm -f ~/.vim/colors/monokai.vim
 	rm -f ~/.vimrc
 	rm -f ~/.zshrc
 
