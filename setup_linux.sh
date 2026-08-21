@@ -31,9 +31,7 @@ APT=(sudo apt-get -y -o DPkg::Lock::Timeout=-1)
 	tree \
 	zsh
 
-# Install yt-dlp from its own release binary rather than from apt: only the
-# official builds can update themselves in place with `yt-dlp -U`. It lives in
-# ~/.local/bin because that swap needs a directory the user owns.
+# Install yt-dlp from release binary
 YT_DLP="$HOME/.local/bin/yt-dlp"
 if [ -x "$YT_DLP" ]; then
     "$YT_DLP" -U
