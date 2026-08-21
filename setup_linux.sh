@@ -31,6 +31,18 @@ APT=(sudo apt-get -y -o DPkg::Lock::Timeout=-1)
 	tree \
 	zsh
 
+# Install yt-dlp from its own release binary rather than from apt: only the
+# official builds can update themselves in place with `yt-dlp -U`. It lives in
+# ~/.local/bin because that swap needs a directory the user owns.
+YT_DLP="$HOME/.local/bin/yt-dlp"
+if [ -x "$YT_DLP" ]; then
+    "$YT_DLP" -U
+else
+    mkdir -p "$(dirname "$YT_DLP")"
+    curl -fsSL https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o "$YT_DLP"
+    chmod +x "$YT_DLP"
+fi
+
 # Install oh-my-zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
