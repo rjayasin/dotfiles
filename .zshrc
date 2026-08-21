@@ -19,7 +19,7 @@ alias ag='rg -i'
 alias f='rg --files | rg'
 
 # spawn (or re-attach to) claude in a dedicated tmux session
-alias ct='tmux new-session -A -s claude claude'
+alias ct='tmux new-session -A -s claude claude rc'
 
 alias grep='grep --color=auto'
 # Directory color = bold blue (Ex). Safe because iTerm "brighten bold text" is OFF, so bold
