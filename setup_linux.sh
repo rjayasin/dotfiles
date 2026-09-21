@@ -16,7 +16,6 @@ APT=(sudo apt-get -y -o DPkg::Lock::Timeout=-1)
 	btop \
 	curl \
 	ffmpeg \
-	firefox \
 	fzf \
 	gh \
 	git \
@@ -30,6 +29,11 @@ APT=(sudo apt-get -y -o DPkg::Lock::Timeout=-1)
 	speedtest-cli \
 	tree \
 	zsh
+
+# Firefox only on desktop machines
+if dpkg -s ubuntu-desktop-minimal >/dev/null 2>&1; then
+	"${APT[@]}" install firefox
+fi
 
 # Install yt-dlp from release binary
 YT_DLP="$HOME/.local/bin/yt-dlp"
