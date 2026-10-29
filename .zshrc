@@ -9,7 +9,7 @@ source $ZSH/oh-my-zsh.sh
 # Use vim keybindings
 bindkey -v
 # fix history not working in vim mode
-bindkey '^r' history-incremental-search-backward
+#bindkey '^r' history-incremental-search-backward
 
 export EDITOR=nvim
 
