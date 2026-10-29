@@ -9,6 +9,8 @@ sync:
 	ln -sf $(PWD)/.vim/colors/monokai.vim ~/.vim/colors/monokai.vim
 	ln -sf $(PWD)/.vimrc ~/.vimrc
 	ln -sf $(PWD)/.zshrc ~/.zshrc
+	mkdir -p ~/.config/ghostty
+	ln -sf $(PWD)/.config/ghostty/config.ghostty ~/.config/ghostty/config.ghostty
 	mkdir -p ~/.config/nvim
 	ln -sf $(PWD)/.config/nvim/init.vim ~/.config/nvim/init.vim
 
@@ -16,6 +18,7 @@ sync:
 
 clean:
 	# Keep files alphabetized
+	rm -f ~/.config/ghostty/config.ghostty
 	rm -f ~/.config/nvim/init.vim
 	rm -f ~/.gitconfig
 	rm -f ~/.gitignore_global

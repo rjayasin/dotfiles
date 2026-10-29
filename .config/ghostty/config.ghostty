@@ -1,0 +1,43 @@
+# Font
+font-family = "Meslo LG M DZ for Powerline"
+font-size = 14
+
+# Colors: Solarized Dark, copied from iTerm2's Default profile
+background = #002b36
+foreground = #839496
+bold-color = #93a1a1
+cursor-color = #839496
+cursor-text = #073642
+selection-background = #24ff00
+selection-foreground = #93a1a1
+palette = 0=#073642
+palette = 1=#dc322f
+palette = 2=#859900
+palette = 3=#b58900
+palette = 4=#268bd2
+palette = 5=#d33682
+palette = 6=#2aa198
+palette = 7=#eee8d5
+palette = 8=#0f7ea4
+palette = 9=#cb4b16
+palette = 10=#586e75
+palette = 11=#657b83
+palette = 12=#839496
+palette = 13=#6c71c4
+palette = 14=#93a1a1
+palette = 15=#fdf6e3
+
+# Cursor: no blinking
+cursor-style-blink = false
+
+# Window
+# macos-titlebar-style = native
+
+# Behavior
+scrollback-limit = 100000000
+macos-option-as-alt = false
+confirm-close-surface = false
+quit-after-last-window-closed = true
+
+# Copy Ghostty's terminfo to SSH hosts so they understand TERM=xterm-ghostty
+shell-integration-features = ssh-terminfo
