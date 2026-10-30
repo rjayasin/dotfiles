@@ -4,6 +4,17 @@ ZSH_THEME="agnoster"
 
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
+
+# Agnoster's prompt_context, but only the first character of the username
+prompt_context() {
+  if [[ "$USERNAME" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment "$AGNOSTER_CONTEXT_BG" "$AGNOSTER_CONTEXT_FG" "%(!.%{%F{$AGNOSTER_STATUS_ROOT_FG}%}.)%1>>%n%>>@%m"
+  fi
+}
+
+# Agnoster's prompt, but type commands on the line below it
+PROMPT='%{%f%b%k%}$(build_prompt)
+$ '
 ### #####################################
 
 # Use vim keybindings
