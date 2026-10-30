@@ -13,6 +13,8 @@ sync:
 	ln -sf $(PWD)/.config/ghostty/config.ghostty ~/.config/ghostty/config.ghostty
 	mkdir -p ~/.config/nvim
 	ln -sf $(PWD)/.config/nvim/init.vim ~/.config/nvim/init.vim
+	mkdir -p ~/.config/rex
+	ln -sf $(PWD)/.config/rex/init.lua ~/.config/rex/init.lua
 
 	touch ~/.hushlogin
 
@@ -20,6 +22,7 @@ clean:
 	# Keep files alphabetized
 	rm -f ~/.config/ghostty/config.ghostty
 	rm -f ~/.config/nvim/init.vim
+	rm -f ~/.config/rex/init.lua
 	rm -f ~/.gitconfig
 	rm -f ~/.gitignore_global
 	rm -f ~/.hushlogin
