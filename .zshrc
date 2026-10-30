@@ -17,6 +17,12 @@ export EDITOR=nvim
 alias vim='nvim'
 alias ag='rg -i'
 alias f='rg --files | rg'
+# apt installs bat as batcat
+if command -v bat &> /dev/null; then
+    alias cat='bat'
+elif command -v batcat &> /dev/null; then
+    alias cat='batcat'
+fi
 
 alias c='claude'
 # spawn (or re-attach to) claude in a dedicated tmux session
