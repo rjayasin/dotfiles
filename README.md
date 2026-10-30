@@ -1,22 +1,42 @@
-# backup
+# rex-backup
 
-Backups of app settings that don't belong in dotfiles.
+Backup of my [Rex](https://rex.superlogical.com) terminal settings and custom
+themes (Solarized Dark, matching my Ghostty config).
 
-## Rex
+Rex stores everything in the `com.superlogical.rex` macOS defaults domain
+(`~/Library/Preferences/com.superlogical.rex.plist`). This repo keeps the parts
+worth carrying between machines; window positions, sessions, update state, and
+server info are left out.
 
-- `rex/themes.json` — custom themes
-- `rex/settings.sh` — restores the settings and themes (quits Rex first)
+## Contents
 
-Restore:
+- `themes.json` — custom themes (Rex stores these as a JSON blob in `Workspace.customThemes`)
+- `settings.sh` — writes the settings and themes back into Rex
+
+## Restore
+
+Requires `jq`. Quits Rex if it's running, since Rex overwrites its settings when
+it quits.
 
 ```sh
-rex/settings.sh
+./settings.sh
 ```
 
-Back up themes after changing them in Rex:
+Then reopen Rex.
+
+## Backup
+
+After changing themes in Rex, export them:
 
 ```sh
-/usr/libexec/PlistBuddy -c "Print :Workspace.customThemes" ~/Library/Preferences/com.superlogical.rex.plist | jq -S . > rex/themes.json
+/usr/libexec/PlistBuddy -c "Print :Workspace.customThemes" ~/Library/Preferences/com.superlogical.rex.plist | jq -S . > themes.json
 ```
 
-Settings are backed up by hand: update the matching `defaults write` line in `rex/settings.sh`.
+After changing other settings, find the new value and update the matching
+`defaults write` line in `settings.sh`:
+
+```sh
+defaults read com.superlogical.rex | grep Workspace
+```
+
+Then commit and push.
