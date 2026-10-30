@@ -18,6 +18,7 @@ alias vim='nvim'
 alias ag='rg -i'
 alias f='rg --files | rg'
 
+alias c='claude'
 # spawn (or re-attach to) claude in a dedicated tmux session
 alias ct='tmux new-session -A -s claude claude rc'
 
