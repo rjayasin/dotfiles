@@ -36,8 +36,9 @@ elif command -v batcat &> /dev/null; then
 fi
 
 alias c='claude'
-# spawn (or re-attach to) claude in a dedicated tmux session
-alias ct='tmux new-session -A -s claude claude rc'
+# spawn claude in a detached tmux session (no-op if it's already running);
+# attach later with `tmux attach -t claude`
+alias ct='tmux has-session -t =claude 2>/dev/null || tmux new-session -d -s claude claude rc'
 
 alias grep='grep --color=auto'
 # Directory color = bold blue (Ex). Safe because iTerm "brighten bold text" is OFF, so bold
