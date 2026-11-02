@@ -12,6 +12,7 @@ while pgrep -f "Rex Beta.app/Contents/MacOS/" > /dev/null; do
 done
 
 # Keep keys alphabetized
+defaults write com.superlogical.rex rex.agents.names-sessions -bool true
 defaults write com.superlogical.rex Workspace.appearance -string dark
 defaults write com.superlogical.rex Workspace.customThemes -data "$(jq -c . themes.json | xxd -p | tr -d '\n')"
 defaults write com.superlogical.rex Workspace.darkThemeID -string custom-7735C12C-BBE7-4616-B160-EA319A42B07A
@@ -19,10 +20,14 @@ defaults write com.superlogical.rex Workspace.fadesInactivePanes -bool false
 defaults write com.superlogical.rex Workspace.inactivePaneFadeMode -string none
 defaults write com.superlogical.rex Workspace.lightThemeID -string merino-light
 defaults write com.superlogical.rex Workspace.showsActivePaneBorder -bool true
+defaults write com.superlogical.rex Workspace.showsPaneHeaders -bool false
+defaults write com.superlogical.rex Workspace.sidebarPosition -string left
+defaults write com.superlogical.rex Workspace.sidebarShowsActivity -bool false
 defaults write com.superlogical.rex Workspace.tabIconTintMode -string off
+defaults write com.superlogical.rex Workspace.tabStyle -string horizontal
 defaults write com.superlogical.rex Workspace.terminalFallbackFontNames -array
 defaults write com.superlogical.rex Workspace.terminalFontName -string "Meslo LG M DZ for Powerline"
 defaults write com.superlogical.rex Workspace.terminalFontPointSize -float 14
-defaults write com.superlogical.rex Workspace.usesStandardInactiveWindowPaneStyles -bool true
+defaults write com.superlogical.rex Workspace.usesStandardInactiveWindowPaneStyles -bool false
 
 echo "Done! Reopen Rex to apply."
