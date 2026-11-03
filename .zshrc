@@ -15,7 +15,11 @@ fi
 # Agnoster's prompt_context, but only the first character of the username
 prompt_context() {
   if [[ "$USERNAME" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment "$AGNOSTER_CONTEXT_BG" "$AGNOSTER_CONTEXT_FG" "${SSH_ICON:+$SSH_ICON }%(!.%{%F{$AGNOSTER_STATUS_ROOT_FG}%}.)%1>>%n%>>@%m"
+    local seg=$(prompt_segment "$AGNOSTER_CONTEXT_BG" "$AGNOSTER_CONTEXT_FG")
+    # Icon flush against the segment start
+    [[ -n $SSH_ICON ]] && seg="${seg% }$SSH_ICON  "
+    echo -n "$seg%(!.%{%F{$AGNOSTER_STATUS_ROOT_FG}%}.)%1>>%n%>>@%m"
+    CURRENT_BG=$AGNOSTER_CONTEXT_BG
   fi
 }
 
