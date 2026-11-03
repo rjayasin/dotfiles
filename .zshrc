@@ -14,7 +14,7 @@ prompt_context() {
 
 # Agnoster's prompt, but type commands on the line below it
 PROMPT='%{%f%b%k%}$(build_prompt)
-$ '
+%{%B%F{46}%}$%{%f%b%} '
 ### #####################################
 
 # Use vim keybindings
