@@ -5,10 +5,17 @@ ZSH_THEME="agnoster"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
+# Highlight user@host over SSH
+if [[ -n $SSH_CLIENT ]]; then
+  AGNOSTER_CONTEXT_BG=yellow
+  AGNOSTER_CONTEXT_FG=black
+  SSH_ICON=$'\uf233'  # nf-fa-server
+fi
+
 # Agnoster's prompt_context, but only the first character of the username
 prompt_context() {
   if [[ "$USERNAME" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment "$AGNOSTER_CONTEXT_BG" "$AGNOSTER_CONTEXT_FG" "%(!.%{%F{$AGNOSTER_STATUS_ROOT_FG}%}.)%1>>%n%>>@%m"
+    prompt_segment "$AGNOSTER_CONTEXT_BG" "$AGNOSTER_CONTEXT_FG" "${SSH_ICON:+$SSH_ICON }%(!.%{%F{$AGNOSTER_STATUS_ROOT_FG}%}.)%1>>%n%>>@%m"
   fi
 }
 
