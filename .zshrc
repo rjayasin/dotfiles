@@ -5,8 +5,8 @@ ZSH_THEME="agnoster"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-# Highlight user@host over SSH
-if [[ -n $SSH_CLIENT ]]; then
+# Highlight user@host when not on the Mac
+if [[ -n $SSH_CLIENT || $OSTYPE != darwin* ]]; then
   AGNOSTER_CONTEXT_BG=yellow
   AGNOSTER_CONTEXT_FG=black
   SSH_ICON=$'\uf233'  # nf-fa-server
