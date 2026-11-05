@@ -7,7 +7,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Highlight user@host when not on the Mac
 if [[ -n $SSH_CLIENT || $OSTYPE != darwin* ]]; then
-  AGNOSTER_CONTEXT_BG=yellow
+  AGNOSTER_CONTEXT_BG=102  # mid grey
   AGNOSTER_CONTEXT_FG=black
   SSH_ICON=$'\uf233'  # nf-fa-server
 fi
