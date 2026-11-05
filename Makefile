@@ -2,6 +2,8 @@ all: sync
 
 sync:
 	# Keep symlinks alphabetized
+	mkdir -p ~/.claude
+	ln -sf $(PWD)/claude/keybindings.json ~/.claude/keybindings.json
 	ln -sf $(PWD)/.gitconfig ~/.gitconfig
 	ln -sf $(PWD)/.gitignore_global ~/.gitignore_global
 	ln -sf $(PWD)/.tmux.conf ~/.tmux.conf
@@ -20,6 +22,7 @@ sync:
 
 clean:
 	# Keep files alphabetized
+	rm -f ~/.claude/keybindings.json
 	rm -f ~/.config/ghostty/config.ghostty
 	rm -f ~/.config/nvim/init.vim
 	rm -f ~/.config/rex/init.lua
