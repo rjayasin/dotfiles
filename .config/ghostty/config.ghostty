@@ -4,8 +4,8 @@ font-size = 14
 
 # Colors: Solarized Dark, copied from iTerm2's Default profile
 background = #002b36
-foreground = #839496
-bold-color = #93a1a1
+foreground = #d6d1c0
+bold-color = #fdf6e3
 cursor-color = #839496
 cursor-text = #073642
 selection-background = #24ff00
