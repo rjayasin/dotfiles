@@ -6,8 +6,8 @@ set -o pipefail
 cd "$(dirname "$0")"
 
 # Rex writes its settings back when it quits, so it must be closed first
-osascript -e 'quit app "Rex Beta"'
-while pgrep -f "Rex Beta.app/Contents/MacOS/" > /dev/null; do
+osascript -e 'quit app "Rex"'
+while pgrep -f "/Rex.app/Contents/MacOS/Rex" > /dev/null; do
     sleep 0.5
 done
 
