@@ -1,12 +1,14 @@
-# rex-backup
+# Rex
 
-Backup of my [Rex](https://rex.superlogical.com) terminal settings and custom
-themes (Solarized Dark, matching my Ghostty config).
+Settings and custom themes for the [Rex](https://rex.superlogical.com) terminal
+app (Solarized Dark, matching my Ghostty config). Key bindings live separately
+in `.config/rex/init.lua`, which `make sync` symlinks into `~/.config/rex`.
 
-Rex stores everything in the `com.superlogical.rex` macOS defaults domain
-(`~/Library/Preferences/com.superlogical.rex.plist`). This repo keeps the parts
-worth carrying between machines; window positions, sessions, update state, and
-server info are left out.
+Rex stores its app settings in the `com.superlogical.rex` macOS defaults domain
+(`~/Library/Preferences/com.superlogical.rex.plist`). This folder keeps the
+parts worth carrying between machines; window positions, sessions, update
+state, and server info are left out. This repo is public, so check anything
+new from the plist before committing it.
 
 ## Contents
 
@@ -19,7 +21,7 @@ Requires `jq`. Quits Rex if it's running, since Rex overwrites its settings when
 it quits.
 
 ```sh
-./settings.sh
+rex/settings.sh
 ```
 
 Then reopen Rex.
@@ -29,11 +31,11 @@ Then reopen Rex.
 After changing themes in Rex, export them:
 
 ```sh
-/usr/libexec/PlistBuddy -c "Print :Workspace.customThemes" ~/Library/Preferences/com.superlogical.rex.plist | jq -S . > themes.json
+/usr/libexec/PlistBuddy -c "Print :Workspace.customThemes" ~/Library/Preferences/com.superlogical.rex.plist | jq -S . > rex/themes.json
 ```
 
 After changing other settings, find the new value and update the matching
-`defaults write` line in `settings.sh`:
+`defaults write` line in `rex/settings.sh`:
 
 ```sh
 defaults read com.superlogical.rex | grep Workspace
